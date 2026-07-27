@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --charcoal: #111111;
+  --warm-white: #f5f4f2;
+  --violet-accent: #8b7ec8;
+  --burgundy: #6b2d3c;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  @apply bg-warm-white text-charcoal antialiased transition-colors duration-slow;
+}
+
+.dark body {
+  @apply bg-charcoal text-warm-white;
+}
+
+::selection {
+  @apply bg-violet-accent/30 text-charcoal;
+}
+
+.dark ::selection {
+  @apply bg-violet-accent/40 text-warm-white;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-violet-accent/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-violet-accent/50;
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Artwork placeholder gradients */
+.artwork-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Fog overlay */
+.fog-layer {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 0%,
+    rgba(17, 17, 17, 0.15) 70%,
+    rgba(17, 17, 17, 0.4) 100%
+  );
+}
+
+.dark .fog-layer {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 0%,
+    rgba(245, 244, 242, 0.03) 70%,
+    rgba(245, 244, 242, 0.08) 100%
+  );
+}
