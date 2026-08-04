@@ -11,6 +11,7 @@ let sharedMuted = true;
 const subscribers = new Set<(muted: boolean) => void>();
 
 function notifySubscribers() {
+  // ds
   subscribers.forEach((subscriber) => subscriber(sharedMuted));
 }
 
