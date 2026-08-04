@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { artworks, type Artwork, type HoverEffect } from "@/data/artworks";
@@ -88,6 +89,17 @@ function ArtworkRoom({ artwork, index }: { artwork: Artwork; index: number }) {
 function ArtworkVisual({ artwork, isHovered }: { artwork: Artwork; isHovered: boolean }) {
   return (
     <div className={`absolute inset-0 bg-gradient-to-br ${artwork.gradient} artwork-gradient`}>
+      <Image
+        src={artwork.imageSrc}
+        alt={artwork.imageAlt}
+        fill
+        className={`transition-transform duration-[1600ms] ${
+          artwork.imageFit === "contain"
+            ? "object-contain p-2 md:p-4"
+            : "object-cover object-center"
+        } ${isHovered ? "scale-105" : "scale-100"}`}
+        sizes="100vw"
+      />
       <div className="absolute inset-0 bg-charcoal/30 dark:bg-charcoal/50" />
       <HoverEffectLayer effect={artwork.hoverEffect} isHovered={isHovered} accentColor={artwork.accentColor} />
     </div>
