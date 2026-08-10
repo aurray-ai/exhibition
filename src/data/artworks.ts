@@ -65,27 +65,6 @@ export const artworks: Artwork[] = [
     hoverEffect: "coins",
   },
   {
-    slug: "reliquary",
-    title: "Reliquary",
-    year: 2025,
-    story:
-      "A vessel for what remains when someone is gone. Not ashes, not photographs — but the intangible relics of love: a voice remembered, a gesture preserved in muscle memory, a presence felt in empty rooms.",
-    meaning:
-      "Grief is not a problem to solve. It is a reliquary we carry — sacred, heavy, and strangely beautiful.",
-    curatorNote:
-      "Perhaps the emotional heart of the exhibition. Parejo's handling of loss avoids sentimentality while achieving profound tenderness. The butterflies that emerge on hover suggest transformation — the dead becoming something else, something winged.",
-    personalText:
-      "When my father passed, I didn't know what to keep. This painting is my answer: you keep the space they occupied. You keep the way the world changed shape around their absence.",
-    symbolism:
-      "The reliquary traditionally holds saintly remains. Here it holds memory — the most fragile and most enduring of all relics.",
-    imageSrc: "/Reliquary.jpeg",
-    imageAlt: "Reliquary artwork showing a heart-like memorial form plated and labeled with personal losses, surrounded by cream and strawberries.",
-    imageFit: "contain",
-    gradient: "from-slate-950 via-gray-900 to-slate-800",
-    accentColor: "#EF4444",
-    hoverEffect: "butterflies",
-  },
-  {
     slug: "the-solitary-bed",
     title: "The Solitary Bed",
     year: 2025,
@@ -107,7 +86,7 @@ export const artworks: Artwork[] = [
   },
   {
     slug: "the-warmth-of-home",
-    title: "The Warmth of Home",
+    title: "The Bubble of Home",
     year: 2025,
     story:
       "After displacement — Barcelona to London to Mexico — the search for home became its own journey. This piece captures the moment warmth returns: not a place, but a feeling.",
@@ -120,7 +99,7 @@ export const artworks: Artwork[] = [
     symbolism:
       "Warmth as both temperature and emotion. The drifting smoke connects to ancestral memory — altars, kitchens, the places where love is made tangible.",
     imageSrc: "/TheWarmthofHome.jpeg",
-    imageAlt: "The Warmth of Home artwork showing glowing bowls in amber light and drifting smoke.",
+    imageAlt: "The Bubble of Home artwork showing glowing bowls in amber light and drifting smoke.",
     gradient: "from-orange-950 via-amber-900 to-yellow-900",
     accentColor: "#D97706",
     hoverEffect: "warmth",
@@ -143,6 +122,27 @@ export const artworks: Artwork[] = [
     imageAlt: "Altar of the Dead artwork showing a Day of the Dead altar with candles, marigolds, and monarch butterflies.",
     gradient: "from-burgundy via-orange-950 to-amber-950",
     accentColor: "#C2410C",
+    hoverEffect: "butterflies",
+  },
+  {
+    slug: "reliquary",
+    title: "Reliquary",
+    year: 2025,
+    story:
+      "A vessel for what remains when someone is gone. Not ashes, not photographs — but the intangible relics of love: a voice remembered, a gesture preserved in muscle memory, a presence felt in empty rooms.",
+    meaning:
+      "Grief is not a problem to solve. It is a reliquary we carry — sacred, heavy, and strangely beautiful.",
+    curatorNote:
+      "Perhaps the emotional heart of the exhibition. Parejo's handling of loss avoids sentimentality while achieving profound tenderness. The butterflies that emerge on hover suggest transformation — the dead becoming something else, something winged.",
+    personalText:
+      "When my father passed, I didn't know what to keep. This painting is my answer: you keep the space they occupied. You keep the way the world changed shape around their absence.",
+    symbolism:
+      "The reliquary traditionally holds saintly remains. Here it holds memory — the most fragile and most enduring of all relics.",
+    imageSrc: "/Reliquary.jpeg",
+    imageAlt: "Reliquary artwork showing a heart-like memorial form plated and labeled with personal losses, surrounded by cream and strawberries.",
+    imageFit: "contain",
+    gradient: "from-slate-950 via-gray-900 to-slate-800",
+    accentColor: "#EF4444",
     hoverEffect: "butterflies",
   },
 ];
