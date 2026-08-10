@@ -82,7 +82,7 @@ export const artworks: Artwork[] = [
     imageAlt: "Reliquary artwork showing a heart-like memorial form plated and labeled with personal losses, surrounded by cream and strawberries.",
     imageFit: "contain",
     gradient: "from-slate-950 via-gray-900 to-slate-800",
-    accentColor: "#8B7EC8",
+    accentColor: "#EF4444",
     hoverEffect: "butterflies",
   },
   {
