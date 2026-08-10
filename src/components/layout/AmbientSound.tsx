@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const AUDIO_SRC = "/rosalia.mp3";
+const AUDIO_SRC = "/rosalia_v2.mp3";
 const STORAGE_KEY = "exhibition-ambient-sound-muted";
+const DEFAULT_VOLUME = 0.18;
 
 let sharedAudio: HTMLAudioElement | null = null;
 let sharedMuted = true;
@@ -24,9 +25,10 @@ function ensureAudio() {
     sharedAudio = new Audio(AUDIO_SRC);
     sharedAudio.loop = true;
     sharedAudio.preload = "auto";
-    sharedAudio.volume = 0.45;
     sharedAudio.muted = sharedMuted;
   }
+
+  sharedAudio.volume = DEFAULT_VOLUME;
 
   return sharedAudio;
 }
